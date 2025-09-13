@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="startingPosition"></div>
+    
+    <script type="text/babel">
+        const h1 = React.createElement("h1", {}, "Main Heading")
+
+        const h2 = <h2>Hello from JSX</h2>  // JSX - JavaScript XML
+        console.log('///////////////////////////////', h2)
+
+        const x = 10
+        const h3 = <h3 style={{ backgroundColor: 'cyan', padding: '30px', borderRadius: '5px' }}>
+            Sub-Heading - {x == 10 ? 'True' : 'False'}
+        </h3>
+
+        const root = ReactDOM.createRoot(document.querySelector('#startingPosition'))
+        root.render([h1, h2, h3])
+    </script>
+</body>
+
+</html>
